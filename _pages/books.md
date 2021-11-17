@@ -3,7 +3,7 @@ permalink: /books/
 title: "Books"
 excerpt: "A list of books I have read over the past several years"
 header:
-  overlay_image: /assets/images/Background.jpg
+  image: /assets/images/Background.jpg
   caption: "Photo credit: John Fox"
 ---
 
