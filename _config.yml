@@ -76,7 +76,7 @@ author:
 #      url: "https://twitter.com/"
     - label: "Resume"
       icon: "far fa-fw fa-file-pdf"
-      url: "/assets/files/***"
+      url: "/assets/files/2021-Resume.pdf"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/JohnMcGrane"
