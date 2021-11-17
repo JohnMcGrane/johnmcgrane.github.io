@@ -46,7 +46,7 @@ showBenford(Benford)
 ```
 
 
-![png](output_7_0.png)
+![png](/assets/images/output_7_0.png)
 
 ### Simulating the Benford distribution
 
