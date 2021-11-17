@@ -68,7 +68,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-#      url: "mailto:johnmcgranefox@gmail.com"
+      url: "mailto:johnmcgranefox@gmail.com"
     - label: "Resume"
       icon: "far fa-fw fa-file-pdf"
       url: "/assets/files/2021-Resume.pdf"
