@@ -4,4 +4,4 @@ title: "Projects"
 classes: wide
 ---
 
-[Benford Simulation](/benford/)
+[Benford Simulation](/projects/benford/)
