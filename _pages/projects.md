@@ -14,7 +14,7 @@ import pandas as pd
 
 # Introduction
 
-In late 2020 I listened to an episode of RadioLab called "Breaking Benford" (https://www.wnycstudios.org/podcasts/radiolab/articles/breaking-benford) that introduced me to the Benford distribution. At about the same time in my graduate physics class, we were discussing Monte Carlo simulations and how they can be used to obtain accurate estimations of irrational numbers such as pi and Euler's number. This confluence of ideas immediately set me to thinking that it should also be possible to use such repeat random sampling techniques to accurately generate the Benford distribution.
+In late 2020 I listened to an episode of RadioLab called [Breaking Benford](https://www.wnycstudios.org/podcasts/radiolab/articles/breaking-benford) that introduced me to the Benford distribution. At about the same time in my graduate physics class, we were discussing Monte Carlo simulations and how they can be used to obtain accurate estimations of irrational numbers such as pi and Euler's number. This confluence of ideas immediately set me to thinking that it should also be possible to use such repeat random sampling techniques to accurately generate the Benford distribution.
 
 ### What is the Benford distribution?
 
