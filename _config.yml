@@ -75,7 +75,7 @@ author:
 #    - label: "Twitter"
 #      icon: "fab fa-fw fa-twitter-square"
 #      url: "https://twitter.com/"
-    -label: "Reading List"
+    - label: "Reading List"
       icon: "fab fa-fw fa-book"
       url: "https://johnmcgrane.github.io/books"
     - label: "Resume"
