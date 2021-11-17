@@ -8,4 +8,5 @@ classes: wide
 <img src="/assets/images/output_7_0.png" alt="drawing" width="200"/>(https://johnmcgrane.github.io/projects/benford/)
 
 
-[![Benford](/assets/images/output_7_0.png)](https://johnmcgrane.github.io/projects/benford/)
+[<img src="/assets/images/output_7_0.png" alt="drawing" width="200"/>](https://johnmcgrane.github.io/projects/benford/)
+
