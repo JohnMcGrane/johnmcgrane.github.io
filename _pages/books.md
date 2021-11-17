@@ -9,7 +9,7 @@ header:
 ---
 
 Waking Up - Sam Harris<br />
-The Pragmatic - Andy Hunt & Dave Thomas<br />
+The Pragmatic Programmer - Andy Hunt & Dave Thomas<br />
 The Prophet - Kahlil Gibran<br />
 Complexity - Mitchell Waldrop<br />
 Circe - Madeline Miller<br />
@@ -55,6 +55,7 @@ The Cider House Rules - John Irving<br />
 The World According to Garp - John Irving<br />
 A Prayer for Owen Meany - John Irving<br />
 A Gentleman in Moscow	- Amor Towles<br />
+Dreams From My Father - Barack Obama<br />
 The Unbearable Lightness of Being - Milan Kundera<br />
 The Death of Ivan Ilyich - Leo Tolstoy<br />
 Family Happiness - Leo Tolstoy<br />
