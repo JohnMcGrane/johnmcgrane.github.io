@@ -64,7 +64,7 @@ author:
   name   : "John Fox"
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "Scientist | Analyst | Explorer"
-  location: "Minnesota"
+  #location: "Minnesota"
   links:
     - label: "Minnesota"
       icon: "fas fa-fw fa-map-marker-alt"
