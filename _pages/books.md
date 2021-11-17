@@ -3,6 +3,7 @@ permalink: /books/
 title: "Books"
 header:
   overlay_image: /assets/images/Background.jpg
+  overlay_filter: 0.5
   caption: "Photo credit: John Fox"
 ---
 
