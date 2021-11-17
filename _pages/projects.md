@@ -1,6 +1,6 @@
 ---
-permalink: /projects/
-title: "Projects"
+permalink: /projects/Benford/
+title: "Benford Simulation"
 classes: wide
 ---
 
