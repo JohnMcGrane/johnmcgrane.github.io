@@ -218,7 +218,7 @@ data = np.array(pval_matrix)
 fig, ax = plt.subplots(figsize=(10,10))
 ax.matshow(data, cmap='plasma',alpha = 0.8)
 for (i, j), z in np.ndenumerate(data):
-    ax.text(j, i, '{:0.2f}'.format(z), ha='center', va='center',size = 14) #### CHECK THE ORDERING HERE FOR I,J
+    ax.text(j, i, '{:0.2f}'.format(z), ha='center', va='center',size = 14)
 ax.set_xlabel("Upper Limit Resets",size=20)    
 ax.xaxis.set_label_position('top')
 ax.set_xticks(ticks = np.arange(0,10)) 
