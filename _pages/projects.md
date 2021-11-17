@@ -317,9 +317,7 @@ pval_graph(pvals100k)
 
 Great! The standard error shows that calcualted p-value is well within one standard of 0.5. Moreover, the p-values are uniformly distributed. For 100,000 samples, 10 orders of magnitude and 9 upper limit resets will produce a distribution that is statistically similar to the Benford distribution.
 
-For one last task, let's see if we can identify the Benford distribution in some data from the natural world. We'll look at the surface area of Minnesota lakes using a dataset compiled by John Downing at Minnesota Sea Grant.
-
-Downing, John (2021): Simplified list of lakes in Minnesota showing area and shore length. figshare. Dataset. https://doi.org/10.6084/m9.figshare.14569200.v1 
+For one last task, let's see if we can identify the Benford distribution in some data from the natural world. We'll look at the surface area of Minnesota lakes using a [dataset](https://doi.org/10.6084/m9.figshare.14569200.v1) compiled by John Downing at Minnesota Sea Grant in 2021.
 
 
 ```python
