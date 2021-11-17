@@ -1,3 +1,8 @@
+---
+permalink: /projects/
+title: "Projects"
+---
+
 ```python
 import matplotlib
 import matplotlib.pyplot as plt
