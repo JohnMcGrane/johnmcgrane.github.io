@@ -15,6 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 header:
   image: /assets/images/Background.jpg
+  caption: "Photo credit: John Fox"
 
 title: John Fox
 email: johnmcgranefox@gmail.com
