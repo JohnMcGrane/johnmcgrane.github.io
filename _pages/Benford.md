@@ -1,5 +1,5 @@
 ---
-permalink: /projects/Benford/
+permalink: /projects/benford/
 title: "Benford Simulation"
 classes: wide
 ---
