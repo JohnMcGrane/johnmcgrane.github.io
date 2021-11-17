@@ -1,6 +1,7 @@
 ---
 permalink: /projects/
 title: "Projects"
+classes: wide
 ---
 
 ```python
@@ -46,7 +47,6 @@ showBenford(Benford)
 
 
 ![png](output_7_0.png)
-
 
 ### Simulating the Benford distribution
 
