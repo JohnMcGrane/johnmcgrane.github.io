@@ -1,6 +1,9 @@
 ---
 permalink: /books/
 title: "Books"
+header:
+  overlay_image: /assets/images/Background.jpg
+  caption: "Photo credit: John Fox"
 ---
 
 Waking Up - Sam Harris<br />
