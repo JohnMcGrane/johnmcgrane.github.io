@@ -1,8 +1,6 @@
 ---
-title: "Books"
-layout: books
 permalink: /books/
-author_profile: true
+title: "Books"
 ---
 
 Waking Up					                  Sam Harris
