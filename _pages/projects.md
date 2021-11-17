@@ -81,7 +81,7 @@ showBenford(simulateBenford(samples=10000,oom=3,ulresets=0))
 ```
 
 
-![png](output_12_0.png)
+![png](/assets/images/output_12_0.png)
 
 
 Interestingly, resetting the upper limit once before sample selection doesn't produce the Benford distribution either. However, we can see that we are moving in the right direction. 
@@ -94,7 +94,7 @@ showBenford(simulateBenford(samples=10000,oom=3,ulresets=1))
 ```
 
 
-![png](output_15_0.png)
+![png](/assets/images/output_15_0.png)
 
 
 Resetting the upper limit twice before sample selection produces a distribution that at least visually, is closer to the true Benford distribution, as demonstrated below. Indeed, the more times we reset the upper limit before selecting a sample, the better our experimental data approximate the true Benford distribution.
@@ -107,7 +107,7 @@ showBenford(simulateBenford(samples=10000,oom=3,ulresets=2))
 ```
 
 
-![png](output_18_0.png)
+![png](/assets/images/output_18_0.png)
 
 
 ### Chi-Square Goodness of Fit Test
@@ -187,7 +187,7 @@ pval_graph(pvals1k)
 ```
 
 
-![png](output_33_0.png)
+![png](/assets/images/output_33_0.png)
 
 
 How can we improve upon these results if we don't want to increase the time complexity of the simulation? Under this constraint, our only option is to adjust the order of magnitude of our original dataset and the number of times we reset the upper limit before sampling. That is, we adjust the *oom* and *ulresets* parameters of the simulateBenford() function. To investigate how these two parameters interact with one another to influence the results, we can survey a number combinations. Note that the order of magnitude cannot be 0 initially because then we would just be sampling the number "1" over and over. Similarly, as mentioned above, the upper limit should be reset 1 or more times. The following survey of parameter combinations is time intensive, yet illustrative. We are searching for combinations that yield average p-values near or equal to 0.5, indivative of a uniform distribution of p-values. 
@@ -231,7 +231,7 @@ plt.show()
 ```
 
 
-![png](output_38_0.png)
+![png](/assets/images/output_38_0.png)
 
 
 This visualization shows that there are many combinations of the oom and ulresets parameters that will yield a proper Benford distribution. At low values for the oom parameter, the highest average p-value in each row is achieved where the ulresets is equal to the oom parameter minus one. At higher values for the oom parameter, a notable trend is that the ulresets parameter should not exceed the oom parameter as this leads to a rapidly decreasing average p-value. Because the oom = ulresets+1 combination works at low oom values and stays valid at high oom values as well, this approach to parameterization will be used. 
@@ -258,7 +258,7 @@ pval_graph(pvals)
 ```
 
 
-![png](output_43_0.png)
+![png](/assets/images/output_43_0.png)
 
 
 As expected, a uniform distribution for our mean p-values. These parameters will reliably produce a statistically valid Benford distribution, shown below. 
@@ -271,7 +271,7 @@ showBenford(simulateBenford(samples=1000,oom=10,ulresets=9))
 ```
 
 
-![png](output_46_0.png)
+![png](/assets/images/output_46_0.png)
 
 
 Still, although statistically valid, the distribution is visually unsatisfactory. We would like to see a closer match with the true Benford distribution. For this, we crank our sample number higher. Let's try 100,000. 
@@ -284,7 +284,7 @@ showBenford(simulateBenford(samples=100000,oom=10,ulresets=9))
 ```
 
 
-![png](output_49_0.png)
+![png](/assets/images/output_49_0.png)
 
 
 Much better. One last computationally intensive run of simulations to ensure that the mean p-values are still uniformly distributed for 100,000 samples. Standard error on the mean can also be calculated to check that the calculated mean p-value is within one standard deviation of 0.50.
@@ -312,7 +312,7 @@ pval_graph(pvals100k)
 ```
 
 
-![png](output_54_0.png)
+![png](/assets/images/output_54_0.png)
 
 
 Great! The standard error shows that calcualted p-value is well within one standard of 0.5. Moreover, the p-values are uniformly distributed. For 100,000 samples, 10 orders of magnitude and 9 upper limit resets will produce a distribution that is statistically similar to the Benford distribution.
@@ -471,7 +471,7 @@ showBenford(results/np.sum(results))
 ```
 
 
-![png](output_64_0.png)
+![png](/assets/images/output_64_0.png)
 
 
 
