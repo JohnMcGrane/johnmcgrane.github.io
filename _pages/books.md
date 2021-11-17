@@ -4,7 +4,6 @@ title: "Books"
 excerpt: "A list of books I have read over the past several years"
 header:
   overlay_image: /assets/images/Background.jpg
-  overlay_filter: 0.5
   caption: "Photo credit: John Fox"
 ---
 
