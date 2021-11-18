@@ -1,6 +1,6 @@
 ---
-permalink: /books/
-title: "Books"
+permalink: /reading/
+title: "Reading"
 excerpt: "A list of books I have read over the past several years"
 header:
   overlay_image: /assets/images/Background2.jpg
