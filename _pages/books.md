@@ -24,7 +24,7 @@ Dune - Frank Herbert<br />
 Brilliant Orange - David Winner<br />
 Open Veins of Latin America - Eduardo Galeano<br />
 Love in the Time of Cholera - Gabriel García Márquez<br />
-Bad New from a Black Coast - Moritz Thomson<br />
+Bad News from a Black Coast - Moritz Thomson<br />
 My Two Wars - Moritz Thomson<br />
 Air Apparent - Mark Monmonier<br />
 The Saddest Pleasure - Moritz Thomson<br />
