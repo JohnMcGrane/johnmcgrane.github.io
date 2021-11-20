@@ -1,5 +1,6 @@
 ---
 permalink: /projects/
+layout: splash
 title: "Portfolio"
 classes: wide
 ---
