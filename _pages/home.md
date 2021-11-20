@@ -1,7 +1,8 @@
----
+ ---
 layout: single
-permalink: 
-author_profile: true
+permalink: /
 hidden: true
-excerpt: >John Fox <br />    
----
+author_profile: true
+excerpt: >
+  John Fox<br />
+  ---
