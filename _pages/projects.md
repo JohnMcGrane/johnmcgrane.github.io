@@ -23,7 +23,6 @@ feature_row:
     btn_class: "btn--primary"
     
     
-    
 <!--     [Benford Simulation](https://johnmcgrane.github.io/projects/benford/)<br />
 [<img src="/assets/images/output_7_0.png" alt="drawing" width="300"/>](https://johnmcgrane.github.io/projects/benford/)
 ![image](https://user-images.githubusercontent.com/69469000/142742775-17b398ca-d84b-4fd3-adec-9d8cec40d678.png)
