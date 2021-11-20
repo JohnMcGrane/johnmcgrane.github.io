@@ -7,6 +7,7 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/images/Background2.jpg
+  author_profile: false
   caption: "Photo credit: John Fox"
 excerpt: "A collection of my personal projects"
 intro: 
