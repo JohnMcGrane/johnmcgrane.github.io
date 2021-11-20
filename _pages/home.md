@@ -4,5 +4,5 @@ permalink: /
 author_profile: true
 hidden: true
 excerpt: >
-John Fox.<br />    
+John Fox <br />    
 ---
