@@ -1,6 +1,6 @@
 ---
 permalink: /projects/
-title: "Projects"
+title: "Portfolio"
 classes: wide
 ---
 
