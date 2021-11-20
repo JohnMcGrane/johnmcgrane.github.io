@@ -8,10 +8,10 @@ header:
   overlay_filter: "0.5"
   overlay_image: /assets/images/Background2.jpg
   author_profile: false
-  caption: "Photo credit: John Fox"
+  caption: "© John Fox"
 excerpt: "A collection of my personal projects"
 intro: 
-  - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'
+  - excerpt: ''
 feature_row:
       
   - image_path: assets/images/unsplash-gallery-image-1-th.jpg
