@@ -17,14 +17,14 @@ feature_row:
     url: "https://johnmcgrane.github.io/projects/benford/"
     btn_class: "btn--primary"
     btn_label: "View Project"
-  - image_path: /assets/images/output_7_0.png
+  - image_path: /assets/images/kde.png
     alt: "NB Classifier with KDE"
     title: "NB Classifier with KDE"
     excerpt: "Improving Naive Bayes Classifier performance using Kernel Density Estimation"
     url: "https://johnmcgrane.github.io/projects/nbckde/"
     btn_class: "btn--primary"
     btn_label: "View Project"
-  - image_path: /assets/images/output_7_0.png
+  - image_path: /assets/images/streamlit.png
     alt: "Project 3"
     title: "Project 3"
     excerpt: "Coming soon!"
