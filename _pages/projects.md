@@ -16,21 +16,21 @@ feature_row:
     excerpt: "Statistical Exploration of the Benford Distribution via Monte Carlo Simulation"
     url: "https://johnmcgrane.github.io/projects/benford/"
     btn_class: "btn--primary"
-    btn_label: "View"
+    btn_label: "View Project"
   - image_path: /assets/images/output_7_0.png
-    alt: "NBC with KDE"
-    title: "Naive Bayes Classifier using KDE"
-    excerpt: "From Scratch Implementation of Naive Bayes Classifier improved by Kernel Density Estimation"
+    alt: "NB Classifier with KDE"
+    title: "NB Classifier with KDE"
+    excerpt: "Improving Naive Bayes Classifier performance using Kernel Density Estimation"
     url: "https://johnmcgrane.github.io/projects/nbckde/"
     btn_class: "btn--primary"
-    btn_label: "View"
+    btn_label: "View Project"
   - image_path: /assets/images/output_7_0.png
-    alt: "100% free"
-    title: "100% free"
-    excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it... whatever!"
-    url: "/docs/license/"
+    alt: "Project 3"
+    title: "Project 3"
+    excerpt: "Coming soon!"
+    url: "https://johnmcgrane.github.io/"
     btn_class: "btn--primary"
-    btn_label: "Learn more"
+    btn_label: "View Project"
 ---
 
 {% include feature_row %}
