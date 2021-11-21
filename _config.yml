@@ -63,7 +63,7 @@ plugins:
 author:
   name   : "John Fox"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Scientist | Analyst | Explorer"
+  bio    : "Scientist | Thinker | Explorer"
 #  location: "Minnesota"
   links:
     - label: "Minnesota"
