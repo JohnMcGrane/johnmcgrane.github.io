@@ -25,7 +25,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 #twitter_username: username
 github_username: JohnMcGrane
 minimal_mistakes_skin: air
-search: true
+search: false
 
 
 # Build settings

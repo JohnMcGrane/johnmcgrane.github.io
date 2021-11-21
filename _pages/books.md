@@ -1,7 +1,8 @@
 ---
 permalink: /reading/
 title: "Reading"
-excerpt: "A list of books I have read over the past several years"
+classes: wide
+excerpt: "Books from the past several years"
 author_profile: false
 header:
   overlay_image: /assets/images/Background2.jpg
@@ -10,14 +11,9 @@ header:
 ---
 
 Waking Up - Sam Harris<br />
-The Pragmatic Programmer - Andy Hunt & Dave Thomas<br />
 The Prophet - Kahlil Gibran<br />
-Complexity - Mitchell Waldrop<br />
-Circe - Madeline Miller<br />
-The Song of Achilles - Madeline Miller<br />
+Complexity: The Emerging Science at the Edge of Order and Chaos - Mitchell Waldrop<br />
 The Splendid and The Vile - Erik Larson<br />
-The Lost City of the Monkey God - Douglas Preston<br />
-Bananas - Peter Chapman<br />
 Avenue of Mysteries - John Irving<br />
 Oaxaca Journal - Oliver Sacks<br />
 The Silmarillion - J. R. R. Tolkien<br />
@@ -27,17 +23,16 @@ Open Veins of Latin America - Eduardo Galeano<br />
 Love in the Time of Cholera - Gabriel García Márquez<br />
 Bad News from a Black Coast - Moritz Thomson<br />
 My Two Wars - Moritz Thomson<br />
-Air Apparent - Mark Monmonier<br />
-The Saddest Pleasure - Moritz Thomson<br />
-The Return of the King - J. R. R. Tolkien<br />
-The Two Towers - J. R. R. Tolkien<br />
-The Fellowship of the Ring - J. R. R. Tolkien<br />
-Lost in the Wild - Cary J. Griffith<br />
-Born to Run - Christopher McDougall<br />
 The Farm on the River of Emeralds - Moritz Thomson<br />
 Living Poor - Moritz Thomson<br />
+The Saddest Pleasure: A Journey on Two Rivers - Moritz Thomson<br />
+Air Apparent - Mark Monmonier<br />
+Lost in the Wild - Cary J. Griffith<br />
+Born to Run - Christopher McDougall<br />
 The Devil’s Highway - Luis Alberto Urrea<br />
 Unbroken - Laura Hillenbrand<br />
+The Lost City of the Monkey God - Douglas Preston<br />
+The Pragmatic Programmer - Andy Hunt & Dave Thomas<br />
 One Hundred Years of Solitude - Gabriel García Márquez<br />
 In the Heart of the Sea - Nathaniel Philbrick<br />
 Rules of Civility - Amor Towles<br />
@@ -45,11 +40,15 @@ Endurance - Alfred Lansing<br />
 The Alchemist - Paulo Coelho<br />
 My Own Country - Abraham Verghese<br />
 Being Mortal - Atul Gawande<br />
+The Return of the King - J. R. R. Tolkien<br />
+The Two Towers - J. R. R. Tolkien<br />
+The Fellowship of the Ring - J. R. R. Tolkien<br />
 1984 - George Orwell<br />
 When Breath Becomes Air - Paul Kalanithi<br />
 Origin - Dan Brown <br />
 Dark Disciple - Christie Golden<br />
 Catalyst - James Luceno<br />
+Bananas: How the United Fruit Company Shaped the World - Peter Chapman<br />
 The Hotel New Hampshire - John Irving<br />
 A Widow for One Year - John Irving<br />
 The Cider House Rules - John Irving<br />
@@ -57,6 +56,8 @@ The World According to Garp - John Irving<br />
 A Prayer for Owen Meany - John Irving<br />
 A Gentleman in Moscow	- Amor Towles<br />
 Dreams From My Father - Barack Obama<br />
+Circe - Madeline Miller<br />
+The Song of Achilles - Madeline Miller<br />
 The Unbearable Lightness of Being - Milan Kundera<br />
 The Death of Ivan Ilyich - Leo Tolstoy<br />
 Family Happiness - Leo Tolstoy<br />
