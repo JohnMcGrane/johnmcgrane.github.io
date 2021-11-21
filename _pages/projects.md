@@ -25,7 +25,6 @@ feature_row:
     btn_class: "btn--primary"
     btn_label: "View Project"
   - image_path: /assets/images/streamlit.png
-    image_size: [20, 20]
     alt: "Project 3"
     title: "Project 3"
     excerpt: "Coming soon!"
