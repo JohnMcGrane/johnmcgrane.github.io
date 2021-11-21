@@ -2,6 +2,7 @@
 permalink: /projects/benford/
 title: "Benford Simulation"
 classes: wide
+author_profile: false
 ---
 
 ```python
@@ -18,7 +19,7 @@ In late 2020 I listened to an episode of RadioLab called [Breaking Benford](http
 
 ### What is the Benford distribution?
 
-First formally characterized by Frank Benford in 1938, the later named "Benford" distribution describes the distribution of the first digits of numbers [1-9] in some datasets, particularly datasets wherein the numbers are spread out over several orders of magnitude. The Benford distribution is shown below. With numbers in a dataset that adheres to the Benford distribution, we see that 30.1% of the numbers start with the digit 1, 17.6% start with the digit 2, etc... all the way down to only 4.5% of the numbers starting with a 9. 
+First formally characterized by Frank Benford in 1938, the later named "Benford" distribution describes the distribution of the first digits of numbers [1-9] in some datasets, particularly datasets wherein the numbers are spread out over several orders of magnitude. The Benford distribution is shown below. With numbers in a dataset that adheres to the Benford distribution, we see that 30.1% of the numbers start with the digit 1, 17.6% start with the digit 2, etc... all the way down to only 4.5% of the numbers starting with a 9.
 
 
 ```python
@@ -53,7 +54,7 @@ showBenford(Benford)
 
 ```python
 def simulateBenford(samples, oom, ulresets):
-    highLimit = 10**oom                             # Set the order of magnitude 
+    highLimit = 10**oom                             # Set the order of magnitude
     results = np.zeros(samples)                     # Create numpy array for results
     for i in range(0, samples):                     # Collect a sample n times
         randomInt = sampler(highLimit, ulresets)    # Pass size of dataset and # of randomizations to sampler function
@@ -61,15 +62,15 @@ def simulateBenford(samples, oom, ulresets):
     results=np.bincount(results.astype('int64'),minlength=10)[1:]/samples # Freq. of each digit & normalize to unity
     return results                          # Return results, an array of length 9 with each digits density
 
-def sampler(upperLimit, resets):   
+def sampler(upperLimit, resets):
     upperLim = np.random.randint(1, high=upperLimit) # Perform one reset of the upper limit
-    resets -=1                                       # Decrement randomizations parameter 
+    resets -=1                                       # Decrement randomizations parameter
     if resets <= -1 or upperLim == 1:                # If specified # of resets achieved, return upperLim as sample
         return upperLim
     return sampler(upperLim, resets)                 # Otherwise, call sampler recursively to reset upperLim again
 ```
 
-Our task is now to build a function that randomly produces numbers that abide by Benford's law. Our function will take three parameters (1) the number of sampling events (*n* argument), (2) the order of magnitude of the dataset from which we will randomly select a sample (*oom* argument), and (3) the number of times the upper limit of the dataset will be reset before sampling (*ulresets* argument, implemented by the *sampler* function). This last *ulresets* parameter is perhaps the most difficult to understand but is vital for the production of Benford abiding data. 
+Our task is now to build a function that randomly produces numbers that abide by Benford's law. Our function will take three parameters (1) the number of sampling events (*n* argument), (2) the order of magnitude of the dataset from which we will randomly select a sample (*oom* argument), and (3) the number of times the upper limit of the dataset will be reset before sampling (*ulresets* argument, implemented by the *sampler* function). This last *ulresets* parameter is perhaps the most difficult to understand but is vital for the production of Benford abiding data.
 
 I will attempt to shed light on this parameter by way of an example. Say the number of sampling events is set to 10,000 and the order of magnitude is set to 3. If the upper limit of the dataset is never randomly reset before sampling (i.e. *ulresets* = 0), then a random number between 1 and 1,000 will be randomly selected 10,000 times. This will NOT result in a Benford distribution because the numbers between 1 and 100 will be uniformly sampled, and all digits will be the first digit of a given sample 1/9 of the time or 11.11% of the time, as shown below .
 
@@ -84,7 +85,7 @@ showBenford(simulateBenford(samples=10000,oom=3,ulresets=0))
 ![png](/assets/images/output_12_0.png)
 
 
-Interestingly, resetting the upper limit once before sample selection doesn't produce the Benford distribution either. However, we can see that we are moving in the right direction. 
+Interestingly, resetting the upper limit once before sample selection doesn't produce the Benford distribution either. However, we can see that we are moving in the right direction.
 
 ### Figure 3
 
@@ -112,7 +113,7 @@ showBenford(simulateBenford(samples=10000,oom=3,ulresets=2))
 
 ### Chi-Square Goodness of Fit Test
 
-It is one thing to say that two distributions look similar and quite another to statistically prove that they are the same assuming a certain significance level. In this section we will determine the parameters to our simulation that yield statistically valid Benford distributions. To achieve this, we will use Chi-Square goodness of fit testing and a significance level of $\alpha$ =  0.05. So, for example, in the most recent example we collected 10,000 random samples between 1-1000 after resetting the upper limit two times. We will proceed with Chi-Square testing of these parameters. 
+It is one thing to say that two distributions look similar and quite another to statistically prove that they are the same assuming a certain significance level. In this section we will determine the parameters to our simulation that yield statistically valid Benford distributions. To achieve this, we will use Chi-Square goodness of fit testing and a significance level of $\alpha$ =  0.05. So, for example, in the most recent example we collected 10,000 random samples between 1-1000 after resetting the upper limit two times. We will proceed with Chi-Square testing of these parameters.
 
 Because this is a Monte Carlo simulation, it makes sense to repeat our testing a number of times to make sure we are getting a reliable Chi-Square statistic and p-value. Let's measure the goodness of fit results for 1,000 Monte Carlo simulations, each with 10,000 sampling events after twice resetting the upper limit on a dataset with an original size of three orders of magnitude.
 
@@ -139,7 +140,7 @@ n_simulations(n_sims = 1000, samples = 10000, oom = 3, ulresets = 2)
     p-value       : 5.778130420535235e-06 ± 5.368245122757202e-05
 
 
-Clearly, based on our p-value, our experimental distribution in Figure 4 is not statistically similar to the Benford distribution and we reject the null hypothesis. To improve our statistical results, we have two options. We can either decrease the number of sampling events (which is also beneficial because it reduces the time complexity of the simulation) or we can increase the order of magnitude of the original dataset 
+Clearly, based on our p-value, our experimental distribution in Figure 4 is not statistically similar to the Benford distribution and we reject the null hypothesis. To improve our statistical results, we have two options. We can either decrease the number of sampling events (which is also beneficial because it reduces the time complexity of the simulation) or we can increase the order of magnitude of the original dataset
 First, we will decrease the number of sampling events, in this case from 10,000 to 5,000 and then down to 1,000.
 
 ### 5,000 Samples
@@ -165,7 +166,7 @@ print(f"Chi-Squared: {np.mean(chisq1k)} ± {np.std(chisq1k)}\np-value    : {np.m
     p-value    : 0.2273694973135859 ± 0.23332735022404547
 
 
-With one thousand simulations of a Monte Carlo experiment with 1,000 samples (taken after two upper limit resets from an original dataset size of 1,000) we can finally accept the null hypothesis that these simulation parameters produce a true Benford distribution. However, if we look at the standard deviation of the p-values, we can see that these parameters don't reliably produce the Benford distribution. In other words, it is only *on average* that these parameters statistically reproduce the Benford distribution. If we visualize the distribution of p-values, we can see that these parameters are not sufficient. The distribution of p-values should be uniform. We have more work to do. 
+With one thousand simulations of a Monte Carlo experiment with 1,000 samples (taken after two upper limit resets from an original dataset size of 1,000) we can finally accept the null hypothesis that these simulation parameters produce a true Benford distribution. However, if we look at the standard deviation of the p-values, we can see that these parameters don't reliably produce the Benford distribution. In other words, it is only *on average* that these parameters statistically reproduce the Benford distribution. If we visualize the distribution of p-values, we can see that these parameters are not sufficient. The distribution of p-values should be uniform. We have more work to do.
 
 
 ```python
@@ -190,7 +191,7 @@ pval_graph(pvals1k)
 ![png](/assets/images/output_33_0.png)
 
 
-How can we improve upon these results if we don't want to increase the time complexity of the simulation? Under this constraint, our only option is to adjust the order of magnitude of our original dataset and the number of times we reset the upper limit before sampling. That is, we adjust the *oom* and *ulresets* parameters of the simulateBenford() function. To investigate how these two parameters interact with one another to influence the results, we can survey a number combinations. Note that the order of magnitude cannot be 0 initially because then we would just be sampling the number "1" over and over. Similarly, as mentioned above, the upper limit should be reset 1 or more times. The following survey of parameter combinations is time intensive, yet illustrative. We are searching for combinations that yield average p-values near or equal to 0.5, indivative of a uniform distribution of p-values. 
+How can we improve upon these results if we don't want to increase the time complexity of the simulation? Under this constraint, our only option is to adjust the order of magnitude of our original dataset and the number of times we reset the upper limit before sampling. That is, we adjust the *oom* and *ulresets* parameters of the simulateBenford() function. To investigate how these two parameters interact with one another to influence the results, we can survey a number combinations. Note that the order of magnitude cannot be 0 initially because then we would just be sampling the number "1" over and over. Similarly, as mentioned above, the upper limit should be reset 1 or more times. The following survey of parameter combinations is time intensive, yet illustrative. We are searching for combinations that yield average p-values near or equal to 0.5, indivative of a uniform distribution of p-values.
 
 
 ```python
@@ -199,7 +200,7 @@ for oom_num in range(1,11):
     for ulresets_num in range(1,11):
         pvalues, chi = n_simulations(n_sims=1000, samples=1000, oom=oom_num, ulresets=ulresets_num, output=False)
         pval_matrix[oom_num-1,ulresets_num-1] = np.mean(pvalues)
-        # Quick and dirty progress bar 
+        # Quick and dirty progress bar
         if oom_num*ulresets_num == 1:
             print("0" + " "*23 + "25" + " "*23 + "50" + " "*23 + "75" + " "*21 + "100")
         print(".", end="")
@@ -208,7 +209,7 @@ for oom_num in range(1,11):
     0                       25                       50                       75                     100
     ....................................................................................................
 
-Now, we create a visualization showing the mean p-value for every combination for the oom parameter and the ulresets parameter where each parameter can take a value from 1-10. 1000 simulations are used with 1000 samples selected in each simulation. 
+Now, we create a visualization showing the mean p-value for every combination for the oom parameter and the ulresets parameter where each parameter can take a value from 1-10. 1000 simulations are used with 1000 samples selected in each simulation.
 
 ### Figure 6
 
@@ -219,9 +220,9 @@ fig, ax = plt.subplots(figsize=(10,10))
 ax.matshow(data, cmap='plasma',alpha = 0.8)
 for (i, j), z in np.ndenumerate(data):
     ax.text(j, i, '{:0.2f}'.format(z), ha='center', va='center',size = 14)
-ax.set_xlabel("Upper Limit Resets",size=20)    
+ax.set_xlabel("Upper Limit Resets",size=20)
 ax.xaxis.set_label_position('top')
-ax.set_xticks(ticks = np.arange(0,10)) 
+ax.set_xticks(ticks = np.arange(0,10))
 ax.set_xticklabels(labels = np.arange(1,11),fontsize=16)
 ax.set_ylabel("Orders of Magnitude",size=20)
 ax.set_yticks(ticks = np.arange(0,10))
@@ -234,7 +235,7 @@ plt.show()
 ![png](/assets/images/output_38_0.png)
 
 
-This visualization shows that there are many combinations of the oom and ulresets parameters that will yield a proper Benford distribution. At low values for the oom parameter, the highest average p-value in each row is achieved where the ulresets is equal to the oom parameter minus one. At higher values for the oom parameter, a notable trend is that the ulresets parameter should not exceed the oom parameter as this leads to a rapidly decreasing average p-value. Because the oom = ulresets+1 combination works at low oom values and stays valid at high oom values as well, this approach to parameterization will be used. 
+This visualization shows that there are many combinations of the oom and ulresets parameters that will yield a proper Benford distribution. At low values for the oom parameter, the highest average p-value in each row is achieved where the ulresets is equal to the oom parameter minus one. At higher values for the oom parameter, a notable trend is that the ulresets parameter should not exceed the oom parameter as this leads to a rapidly decreasing average p-value. Because the oom = ulresets+1 combination works at low oom values and stays valid at high oom values as well, this approach to parameterization will be used.
 
 We will use 10 orders of magnitude with 9 upper limit resets. We try these parameters with 1000 simulations and 1000 samples, as above, to see if we obtain a uniform distribution of p-values as expected.
 
@@ -261,7 +262,7 @@ pval_graph(pvals)
 ![png](/assets/images/output_43_0.png)
 
 
-As expected, a uniform distribution for our mean p-values. These parameters will reliably produce a statistically valid Benford distribution, shown below. 
+As expected, a uniform distribution for our mean p-values. These parameters will reliably produce a statistically valid Benford distribution, shown below.
 
 ### Figure 8
 
@@ -274,7 +275,7 @@ showBenford(simulateBenford(samples=1000,oom=10,ulresets=9))
 ![png](/assets/images/output_46_0.png)
 
 
-Still, although statistically valid, the distribution is visually unsatisfactory. We would like to see a closer match with the true Benford distribution. For this, we crank our sample number higher. Let's try 100,000. 
+Still, although statistically valid, the distribution is visually unsatisfactory. We would like to see a closer match with the true Benford distribution. For this, we crank our sample number higher. Let's try 100,000.
 
 ### Figure 9
 
@@ -454,7 +455,7 @@ def first_digit_finder(string):
     if string[0]=='0' or string[0] =='.': # If first digit is not 1-9, recurse
         return first_digit_finder(string[1:])
     else:
-        return string[0] # Return first digit 
+        return string[0] # Return first digit
 ```
 
 
@@ -482,6 +483,6 @@ print(f"Chi2 statistic: {test_results[0]}\np-value       : {test_results[1]}")
     p-value       : 0.0
 
 
-Even though the surface area of Minnesota lakes doesn't *exactly* follow a Benford distribution, we can easily see some Benford-like behavior from these data. 
+Even though the surface area of Minnesota lakes doesn't *exactly* follow a Benford distribution, we can easily see some Benford-like behavior from these data.
 
 Done and dusted. Thanks for reading!

@@ -14,4 +14,9 @@ group :jekyll_plugins do
   gem "jemoji"
   gem "jekyll-include-cache"
   gem "jekyll-algolia"
+  gem "json", "2.6.1"
+  gem "jekyll", "3.9.0"
+  gem "github-pages"
 end
+
+gem "webrick", "~> 1.7"
