@@ -3,7 +3,7 @@ permalink: /reading/
 title: "Reading"
 classes: wide
 excerpt: "Books from the past several years"
-author_profile: false
+author_profile: true
 header:
   overlay_image: /assets/images/Background2.jpg
   overlay_filter: 0.3

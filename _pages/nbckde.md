@@ -2,7 +2,7 @@
 permalink: /projects/nbckde/
 title: "Naive Bayes Classifier using KDE"
 classes: wide
-author_profile: false
+author_profile: true
 ---
 ```python
 import pandas as pd

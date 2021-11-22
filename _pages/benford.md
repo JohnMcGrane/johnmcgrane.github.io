@@ -2,7 +2,7 @@
 permalink: /projects/benford/
 title: "Benford Simulation"
 classes: wide
-author_profile: false
+author_profile: true
 ---
 
 ```python
