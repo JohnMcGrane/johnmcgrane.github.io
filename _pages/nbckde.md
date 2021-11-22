@@ -385,7 +385,7 @@ for i in range(1, 21):
 ```
 
 
-![png](output_10_0.png)
+![png](/assets/images/output_10_0.png)
 
 
 Split the data into training features, evaluation features, training labels, and evaluation labels.
@@ -620,7 +620,7 @@ for i in range(1, 21):
 ```
 
 
-![png](output_44_0.png)
+![png](/assets/images/output_44_0.png)
 
 
 To get the best performance out of the improved classifier, we need to tune the bandwidth hyperparameter for the Kernel Density Estimation with our specific dataset. We can do this using the GridSearchCV function from sklearn.
