@@ -8,10 +8,17 @@ author_profile: true
 import pandas as pd
 import matplotlib as mpl
 import numpy as np
+from numpy import mean
+from numpy import std
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import figure
 from sklearn.neighbors import KernelDensity
 from sklearn.model_selection import LeaveOneOut
+from sklearn.metrics import accuracy_score
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
 ```
 
 # The Data
@@ -25,7 +32,7 @@ df = df.drop(index=29).reset_index(drop=True) # Charles Smith had repeat stats, 
 df2 = pd.read_excel('NBA Rookies by Year.xlsx') # Import dataset with player efficiency column
 df2 = df2[['Name','EFF','MIN']] # Remove all columns besides player name, efficiency, and minutes per game
 df.rename(columns={"name": "Name","min":"MIN"},inplace=True) # Rename columns to use as join keys
-df
+df.head()
 ```
 
 
@@ -193,153 +200,9 @@ df
       <td>0</td>
       <td>0.439311</td>
     </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>276</th>
-      <td>1325</td>
-      <td>Andre Spencer</td>
-      <td>20</td>
-      <td>21.1</td>
-      <td>9.4</td>
-      <td>3.7</td>
-      <td>8.2</td>
-      <td>44.8</td>
-      <td>0.0</td>
-      <td>0.1</td>
-      <td>...</td>
-      <td>75.9</td>
-      <td>1.9</td>
-      <td>2.2</td>
-      <td>4.1</td>
-      <td>1.2</td>
-      <td>0.8</td>
-      <td>0.3</td>
-      <td>1.3</td>
-      <td>0</td>
-      <td>0.472822</td>
-    </tr>
-    <tr>
-      <th>277</th>
-      <td>1328</td>
-      <td>Harold Miner</td>
-      <td>73</td>
-      <td>18.9</td>
-      <td>10.3</td>
-      <td>4.0</td>
-      <td>8.4</td>
-      <td>47.5</td>
-      <td>0.0</td>
-      <td>0.1</td>
-      <td>...</td>
-      <td>76.2</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>1.0</td>
-      <td>0.5</td>
-      <td>0.1</td>
-      <td>1.3</td>
-      <td>0</td>
-      <td>0.816702</td>
-    </tr>
-    <tr>
-      <th>278</th>
-      <td>1330</td>
-      <td>Adam Keefe</td>
-      <td>82</td>
-      <td>18.9</td>
-      <td>6.6</td>
-      <td>2.3</td>
-      <td>4.6</td>
-      <td>50.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>...</td>
-      <td>70.0</td>
-      <td>2.1</td>
-      <td>3.2</td>
-      <td>5.3</td>
-      <td>1.0</td>
-      <td>0.7</td>
-      <td>0.2</td>
-      <td>1.2</td>
-      <td>1</td>
-      <td>0.866027</td>
-    </tr>
-    <tr>
-      <th>279</th>
-      <td>1335</td>
-      <td>Chris Smith</td>
-      <td>80</td>
-      <td>15.8</td>
-      <td>4.3</td>
-      <td>1.6</td>
-      <td>3.6</td>
-      <td>43.3</td>
-      <td>0.0</td>
-      <td>0.2</td>
-      <td>...</td>
-      <td>79.2</td>
-      <td>0.4</td>
-      <td>0.8</td>
-      <td>1.2</td>
-      <td>2.5</td>
-      <td>0.6</td>
-      <td>0.2</td>
-      <td>0.8</td>
-      <td>0</td>
-      <td>0.730780</td>
-    </tr>
-    <tr>
-      <th>280</th>
-      <td>1336</td>
-      <td>Brent Price</td>
-      <td>68</td>
-      <td>12.6</td>
-      <td>3.9</td>
-      <td>1.5</td>
-      <td>4.1</td>
-      <td>35.8</td>
-      <td>0.1</td>
-      <td>0.7</td>
-      <td>...</td>
-      <td>79.4</td>
-      <td>0.4</td>
-      <td>1.1</td>
-      <td>1.5</td>
-      <td>2.3</td>
-      <td>0.8</td>
-      <td>0.0</td>
-      <td>1.3</td>
-      <td>1</td>
-      <td>0.536788</td>
-    </tr>
   </tbody>
 </table>
-<p>281 rows × 23 columns</p>
+<p>5 rows × 23 columns</p>
 </div>
 
 
@@ -385,7 +248,7 @@ for i in range(1, 21):
 ```
 
 
-![png](/assets/images/output_10_0.png)
+![png](/assets/images/kde_1.png)
 
 
 Split the data into training features, evaluation features, training labels, and evaluation labels.
@@ -415,7 +278,7 @@ eval_labels = np.array(eval_df['target_5yrs'])
 
 # Naive Bayes Classifier
 
-The following is a from scratch implementation of a naive Bayes classifier.
+The following is a from scratch implementation of the naive Bayes classifier.
 
 Function to calculate the log of the prior probabilities. This will calculate the log of the prior probability of an NBA rookie for two conditions, either lasting at least five years in the NBA or exiting the league before their fifth season.
 
@@ -518,8 +381,8 @@ eval_pred = nba_classifier.predict(eval_features)
 def readout(train_pred,eval_pred,train_labels,eval_labels):
     train_acc = (train_pred==train_labels).mean()
     eval_acc = (eval_pred==eval_labels).mean()
-    print(f'Training data accuracy  : {train_acc:.10f}')
-    print(f'Evaluation data accuracy: {eval_acc:.10f}')
+    print(f'Training accuracy  : {train_acc:.10f}')
+    print(f'Testing  accuracy: {eval_acc:.10f}')
 ```
 
 Evaluating the classifier.
@@ -529,8 +392,8 @@ Evaluating the classifier.
 readout(train_pred,eval_pred,train_labels,eval_labels)
 ```
 
-    Training data accuracy  : 0.6165048544
-    Evaluation data accuracy: 0.5942028986
+    Training accuracy  : 0.5776699029
+    Testing  accuracy: 0.6811594203
 
 
 Check to see if our implementation matches the naive Bayes classifier from the sklearn library.
@@ -544,8 +407,8 @@ eval_sk = gnb.predict(eval_features)
 readout(train_sk,eval_sk,train_labels,eval_labels)
 ```
 
-    Training data accuracy  : 0.6165048544
-    Evaluation data accuracy: 0.5942028986
+    Training accuracy  : 0.5776699029
+    Testing  accuracy: 0.6811594203
 
 
 Good, the results from our implementation match the results from the stock algorithm from sklearn.
@@ -556,31 +419,30 @@ The above results represent the classifier accuracy for only one train-test spli
 
 
 ```python
-def leave_one_out_cv(df,classifier, stock = False):
-    df1 = np.array(df)
-    loo_predictions = np.zeros(df1.shape[0])
-    loo_train = np.zeros(df1.shape[0])
-    for train_index, test_index in LeaveOneOut().split(df1):
-        train_features_loo = df1[train_index]
-        train_labels_loo = np.array(train_features_loo[:,-1])
-        train_features_loo = train_features_loo[:,0:-1]
-        eval_features_loo = df1[test_index]
-        eval_labels_loo = eval_features_loo[:,-1]
-        eval_features_loo = eval_features_loo[:,0:-1]
+def leave_one_out_cv(df, classifier, stock = False):
+    cv_array = np.array(df)
+    X = cv_array[:,0:-1]
+    y = cv_array[:,-1]
+    y_true, y_pred, x_vals = np.zeros(df.shape[0]), np.zeros(df.shape[0]), np.zeros(df.shape[0])
+    for train_ix, test_ix in LeaveOneOut().split(X):
+        X_train, X_test = X[train_ix, :], X[test_ix, :]
+        y_train, y_test = y[train_ix], y[test_ix]
         if stock == False:
-            _classifier = classifier(train_features_loo, train_labels_loo)
+            model = classifier(X_train, y_train)
         else:
-            _classifier = classifier
-        train_pred = _classifier.predict(train_features_loo)
-        eval_pred = _classifier.predict(eval_features_loo)
-        train_acc = (train_pred==train_labels_loo).mean() # Calculate mean training accuracy
-        eval_acc = (eval_pred==eval_labels_loo) # Calculate 1 (correct) or 0 (incorrect)
+            model = classifier.fit(X_train, y_train)
 
-        loo_predictions[test_index[0]] = eval_acc #
-        loo_train[test_index[0]] = train_acc
+        yhat = model.predict(X_test)
+        y_true[test_ix[0]] = y_test[0]
+        y_pred[test_ix[0]] = yhat[0]
 
-    print(f'Leave One Out Testing accuracy: {np.sum(loo_predictions)/df1.shape[0]:.10f}')
-    print(f'Leave One Out Training accuracy: {np.sum(loo_train)/df1.shape[0]:.10f}')
+        train_predictions = model.predict(X_train)
+        train_acc = (train_predictions==y_train).mean()
+        x_vals[test_ix[0]] = train_acc
+    acc = accuracy_score(y_true, y_pred)
+    train_acc = np.mean(np.array(x_vals))
+    print(f'Training accuracy: {train_acc:.10f}')
+    print(f'Testing  accuracy: {acc:.10f}')
 ```
 
 
@@ -588,13 +450,13 @@ def leave_one_out_cv(df,classifier, stock = False):
 leave_one_out_cv(df,NBClassifier)
 ```
 
-    Leave One Out Testing accuracy: 0.5963636364
-    Leave One Out Training accuracy: 0.5973855342
+    Training accuracy: 0.5973855342
+    Testing  accuracy: 0.5963636364
 
 
 # Naive Bayes with Kernel Density Estimation
 
-A Gaussian naive Bayes classifier assumes that each feature in the dataset adheres to a normal distribution. From our visualization of the feature distributions, we can tell that this is not true of our dataset. Although naive Bayes classifiers can still be used in such situations, it stands to reason that if we used non-Gaussian probability density functions to model each feature's data, we could improve the performance of the classifier. To make such a classifier and build improved probability density functions, we will utilize kernel density estimation. For this, we will use the KernelDensity function from sklearn. Our probability density functions will now look as follows:
+A Gaussian naive Bayes classifier assumes that each feature in the dataset adheres to a normal distribution. From our visualization of the feature distributions, we can tell that this is not true of our dataset. Although naive Bayes classifiers can still be used in such situations, it stands to reason that if we used non-Gaussian probability density functions to model each feature's data, we could improve the performance of the classifier. To make such a classifier and build improved probability density functions, we will utilize kernel density estimation. As an illustration of this, the following image shows the probability density distribution for each feature.
 
 
 ```python
@@ -607,20 +469,20 @@ for i in range(1, 21):
     column = df.columns[i-1]
     x_d = np.linspace(-10, 110, 2000)
     x = np.array(df[column]).reshape(-1, 1)
-    kde = KernelDensity(bandwidth=2.0, kernel='gaussian')
+    kde = KernelDensity(bandwidth=2.25701971963392, kernel='gaussian')
     kde.fit(x)
     logprob = kde.score_samples(x_d[:, None])
     plt.yticks(fontsize=8)
     plt.xticks(fontsize=8)
     plt.fill_between(x_d, np.exp(logprob), alpha=0.5)
-    plt.xlim((x.min()-4,x.max()+4))
+    plt.xlim((x.min()-7,x.max()+5))
     plt.ylim(-0.02, np.exp(logprob).max()+0.01)
     plt.title(f"{column}",fontsize=16)
     plt.plot(x, np.full_like(x, -0.01), '|k', markeredgewidth=0.1)
 ```
 
 
-![png](/assets/images/output_44_0.png)
+![png](/assets/images/kde_2.png)
 
 
 To get the best performance out of the improved classifier, we need to tune the bandwidth hyperparameter for the Kernel Density Estimation with our specific dataset. We can do this using the GridSearchCV function from sklearn.
@@ -650,8 +512,8 @@ def create_models(training_fts,train_labels):
     featuresdf = pd.DataFrame(training_fts)
     pos_fts = np.array(featuresdf[train_labels.astype(bool)].reset_index(drop=True))
     neg_fts = np.array(featuresdf[~train_labels.astype(bool)].reset_index(drop=True))
-    pos_models = np.array([KernelDensity(bandwidth = 2.25701971963392).fit(pos_fts[:,i].reshape(-1,1)) for i in range(training_fts.shape[1])])
-    neg_models = np.array([KernelDensity(bandwidth = 2.25701971963392).fit(neg_fts[:,i].reshape(-1,1)) for i in range(training_fts.shape[1])])
+    pos_models = np.array([KernelDensity(bandwidth = 0.12618568830660204).fit(pos_fts[:,i].reshape(-1,1)) for i in range(training_fts.shape[1])])
+    neg_models = np.array([KernelDensity(bandwidth = 0.12618568830660204).fit(neg_fts[:,i].reshape(-1,1)) for i in range(training_fts.shape[1])])
     return np.hstack((neg_models.reshape(-1,1),pos_models.reshape(-1,1)))
 
 def sum_log_likelihood(features, models, prior):
@@ -697,8 +559,8 @@ eval_pred = kde_classifier.predict(eval_features)
 readout(train_pred,eval_pred,train_labels,eval_labels)
 ```
 
-    Training data accuracy  : 0.7184466019
-    Evaluation data accuracy: 0.5942028986
+    Training accuracy  : 0.9174757282
+    Testing  accuracy: 0.7246376812
 
 
 # Cross Validation of KDE classifier
@@ -708,56 +570,48 @@ readout(train_pred,eval_pred,train_labels,eval_labels)
 leave_one_out_cv(df,KDEClassifier)
 ```
 
-    Leave One Out Testing accuracy: 0.6654545455
-    Leave One Out Training accuracy: 0.6900597213
+    Training accuracy: 0.8849236894
+    Testing  accuracy: 0.6254545455
 
 
-Compared to the stock naive Bayes classifier, our improved KDE naive Bayes classifier performed about 6% better. Not incredible, but a notable improvement over the base model. To see how other classifiers perform on this dataset, we can use several prebuilt classifiers from the sklearn library. We will also perform leave one out cross validation to preclude any aberrant results.
+Compared to the stock naive Bayes classifier, our improved KDE naive Bayes classifier performed about 3% better. Not incredible, but a notable improvement over the base model. To see how other classifiers perform on this dataset, we can use several prebuilt classifiers from the sklearn library. We will also perform leave one out cross validation to preclude any aberrant results.
 
 # Comparison to other stock sklearn classifiers
 
 
 ```python
-from sklearn.tree import DecisionTreeClassifier
-dtc = DecisionTreeClassifier().fit(train_features, train_labels)
-leave_one_out_cv(df,dtc,stock = True)
+leave_one_out_cv(df,DecisionTreeClassifier(),stock=True)
 ```
 
-    Leave One Out Testing accuracy: 0.9090909091
-    Leave One Out Training accuracy: 0.9090909091
+    Training accuracy: 1.0000000000
+    Testing  accuracy: 0.6400000000
 
 
 
 ```python
-from sklearn.ensemble import RandomForestClassifier
-rfc = RandomForestClassifier(n_estimators=300).fit(train_features, train_labels)
-leave_one_out_cv(df,rfc,stock = True)
+leave_one_out_cv(df,RandomForestClassifier(n_estimators=300),stock=True)
 ```
 
-    Leave One Out Testing accuracy: 0.9163636364
-    Leave One Out Training accuracy: 0.9163636364
+    Training accuracy: 1.0000000000
+    Testing  accuracy: 0.6690909091
 
 
 
 ```python
-from sklearn.neighbors import KNeighborsClassifier
-knnc = KNeighborsClassifier(n_neighbors=1).fit(train_features, train_labels)
-leave_one_out_cv(df,knnc,stock = True)
+leave_one_out_cv(df,KNeighborsClassifier(n_neighbors=20),stock=True)
 ```
 
-    Leave One Out Testing accuracy: 0.9018181818
-    Leave One Out Training accuracy: 0.9018181818
+    Training accuracy: 0.7340544127
+    Testing  accuracy: 0.7090909091
 
 
 
 ```python
-from sklearn.linear_model import LogisticRegression
-lr = LogisticRegression(penalty = 'none',max_iter=10000).fit(train_features, train_labels)
-leave_one_out_cv(df,lr,stock = True)
+leave_one_out_cv(df,LogisticRegression(penalty = 'none',max_iter=10000),stock=True)
 ```
 
-    Leave One Out Testing accuracy: 0.7381818182
-    Leave One Out Training accuracy: 0.7381818182
+    Training accuracy: 0.7446449900
+    Testing  accuracy: 0.6945454545
 
 
-Clearly, the naive Bayes classifier and the KDE naive Bayes classifier are not the best options when it comes to binary classification. Nonetheless, this dataset does not play to the strongsuits of naive Bayes classifiers. For example, the features in our dataset are not independent. That is, usually a stellar player will have stellar stats in most categories. Naive Bayes can actually perform admirably in situations where features are indeed independent (not just assumed to be independent) and may also perform well with categorical features rather than continuous features.
+Clearly, the naive Bayes classifier and the KDE naive Bayes classifier are not the best options when it comes to binary classification. Nonetheless, this dataset does not play to the strongsuits of naive Bayes classifiers. For example, the features in our dataset are not independent. That is, usually a stellar player will have stellar stats in all categories. Naive Bayes can actually perform admirably in situations where features are indeed independent (not just assumed to be independent) and may also perform well with categorical features rather than continuous features.
