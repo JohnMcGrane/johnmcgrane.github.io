@@ -23,7 +23,7 @@ from sklearn.tree import DecisionTreeClassifier
 
 # The Data
 
-To test the classifier, we will use a dataset that contains the season statistics of 275 NBA rookies between 2016 and 1980, and whether or not that player lasted five years or more in the league. The labeled data comes from (https://data.world/gmoney/nba-rookies-by-min-1980-2016). To add one more feature to the dataset (player efficiency rating), we import another dataset that contains this information (https://data.world/gmoney/nba-rookies-by-min-1980-2016).
+To test the classifier, we will use a dataset that contains the season statistics of 275 NBA rookies between 2016 and 1980, and whether or not that player lasted five years or more in the league. The labeled data comes from [data world](https://data.world/gmoney/nba-rookies-by-min-1980-2016). To add one more feature to the dataset (player efficiency rating), we import another [dataset](https://data.world/gmoney/nba-rookies-by-min-1980-2016) that contains this information.
 
 
 ```python
