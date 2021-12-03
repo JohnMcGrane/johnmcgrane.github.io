@@ -24,11 +24,11 @@ feature_row:
     url: "https://johnmcgrane.github.io/projects/nbckde/"
     btn_class: "btn--primary"
     btn_label: "View Project"
-  - image_path: /assets/images/streamlit.png
-    alt: "Streamlit Web App"
-    title: "Streamlit Web App"
-    excerpt: "In the works"
-    url: "https://johnmcgrane.github.io/"
+  - image_path: /assets/images/strava.png
+    alt: "Strava Data Visualization"
+    title: "Strava Data Visualization"
+    excerpt: "Visualizing eight years of Strava activity"
+    url: "https://johnmcgrane.github.io/projects/strava/"
     btn_class: "btn--primary"
     btn_label: "View Project"
 ---
