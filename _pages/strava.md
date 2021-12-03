@@ -289,8 +289,3 @@ plt.show()
 
 ![png](/assets/images/strava.png)
 
-
-
-```python
-
-```
