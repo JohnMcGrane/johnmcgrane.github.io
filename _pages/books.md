@@ -10,6 +10,7 @@ header:
   caption: "© John Fox"
 ---
 
+Inverting The Pyramid: The History of Soccer Tactics - Jonathan Wilson
 Waking Up - Sam Harris<br />
 The Prophet - Kahlil Gibran<br />
 Complexity: The Emerging Science at the Edge of Order and Chaos - Mitchell Waldrop<br />
