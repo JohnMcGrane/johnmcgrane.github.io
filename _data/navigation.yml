@@ -1,6 +1,6 @@
 main:
-  - title: "About"
-    url: /about/
+  - title: "CV"
+    url: /assets/files/2021-Resume.pdf
   - title: "Portfolio"
     url: /projects/
   - title: "Reading"
