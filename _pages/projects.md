@@ -18,8 +18,8 @@ feature_row:
     btn_class: "btn--primary"
     btn_label: "View Project"
   - image_path: /assets/images/kde.png
-    alt: "NB Classifier with KDE"
-    title: "NB Classifier with KDE"
+    alt: "Naive Bayes Classifier with Kernel Density Estimation"
+    title: "Naive Bayes Classifier with Kernel Density Estimation"
     excerpt: "Improving Naive Bayes Classifier performance using Kernel Density Estimation"
     url: "https://johnmcgrane.github.io/projects/nbckde/"
     btn_class: "btn--primary"

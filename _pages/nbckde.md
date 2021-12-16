@@ -1,6 +1,6 @@
 ---
 permalink: /projects/nbckde/
-title: "Naive Bayes Classifier using KDE"
+title: "Naive Bayes Classifier with Kernel Density Estimation"
 classes: wide
 author_profile: true
 ---
