@@ -24,7 +24,7 @@ feature_row:
     url: "https://johnmcgrane.github.io/projects/nbckde/"
     btn_class: "btn--primary"
     btn_label: "View Project"
-  - image_path: /assets/images/strava.png
+  - image_path: /assets/images/strava1.png
     alt: "Strava Data Visualization"
     title: "Strava Data Visualization"
     excerpt: "Visualizing eight years of Strava activity"
