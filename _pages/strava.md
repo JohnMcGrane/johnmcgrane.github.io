@@ -5,6 +5,7 @@ classes: wide
 author_profile: true
 ---
 
+
 ```python
 import numpy as np
 import pandas as pd
@@ -13,6 +14,8 @@ from datetime import datetime
 import calendar
 from matplotlib.lines import Line2D
 ```
+
+Strava is a activity tracking application that allows users to see their distance and route, and a whole host of other interesting activity data. Since I have been using this application for over 7 years now, I have built up a large cache of personal data in the app. To see how my activity in general and my activity of choice in particular have changed over the years, I created the following data visualizations.
 
 ### Import and view data
 
@@ -200,6 +203,10 @@ df.head()
 ```python
 df['Activity Date'] = list(map(lambda x: datetime.strptime(x,'%b %d, %Y, %H:%M:%S %p'),df['Activity Date']))
 df['Year'] = list(map(lambda x: x.year, df['Activity Date']))
+df['Weekday'] = list(map(lambda x: x.weekday(), df['Activity Date'])) # weekdays labeled 0-6 meaning Monday-Sunday
+daylist = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+df['weekday'] = list(map(lambda x: daylist[x], df['Weekday'])) # weekdays labeled Monday-Sunday
+df['Distance mi'] = list(map(lambda x: x*0.621371, df['Distance']))
 years = np.unique(np.array(df['Year']))
 array = np.zeros((years.size,7,53))
 ```
@@ -287,5 +294,174 @@ plt.show()
 ```
 
 
-![png](/assets/images/strava.png)
+![png](/assets/images/strava1.png)
+
+
+### Additional visualizations
+
+
+```python
+def group_and_count(colname):
+    count_df = df.groupby([colname]).count()['Activity ID']
+    count_df = count_df.sort_values(ascending=False)
+    x_labs = np.array(count_df.index)
+    y_vals = np.array(count_df)
+    return x_labs,y_vals
+
+def charter(xlabs,y,title):
+    plt.figure(figsize=(10,6))
+    xpoints = np.linspace(start = 0, stop = len(y)-1,num = len(y))
+    plt.bar(x = xpoints, height = y, width = 0.9, tick_label = xlabs, color = 'teal')
+    plt.title(title)
+    plt.xticks(fontsize=16)
+    plt.grid(None,axis='x')
+    for count, yval in enumerate(y):
+        plt.annotate(text = f"{yval}", xy = (count-0.15,yval+5),fontsize=14)
+    plt.show()
+```
+
+
+```python
+results = group_and_count('Activity Type')
+charter(results[0],results[1],'Activity Count by Type (2014-2021)')
+```
+
+
+![png](/assets/images/strava2.png)
+
+
+
+```python
+results = group_and_count('Year')
+charter(results[0],results[1],'Activity Count by Year (2014-2021)')
+```
+
+
+![png](/assets/images/strava3.png)
+
+
+
+```python
+results = group_and_count('weekday')
+charter(results[0],results[1],'Activity Count by Weekday (2014-2021)')
+```
+
+
+![png](/assets/images/strava4.png)
+
+
+
+```python
+avg_dist = df.groupby(['Activity Type']).mean()['Distance mi'].sort_values(ascending=False)
+
+activity_count_dict = df.groupby(['Activity Type']).count()['Activity ID'].to_dict() # dict for annotations
+
+y = avg_dist
+xlabs = avg_dist.index
+plt.figure(figsize=(10,6))
+xpoints = np.linspace(start = 0, stop = len(y)-1,num = len(y))
+plt.bar(x = xpoints, height = y, width = 0.9, tick_label = xlabs, color = 'teal')
+plt.title("Average Distance by Activity Type (2014-2021)")
+plt.ylabel("Distance (mi)")
+plt.xticks(fontsize=16)
+plt.grid(None,axis='x')
+for count, yval in enumerate(y):
+    plt.annotate(text = f"{yval:.2f}", xy = (count-0.15,yval+0.5),fontsize=14)
+    plt.annotate(text = f"n = {activity_count_dict[xlabs[count]]}", xy = (count-0.3,yval-1),fontsize=14)
+plt.show()
+```
+
+
+![png](/assets/images/strava5.png)
+
+
+
+```python
+def specific_df(activity):
+    specific_df = df.where(df['Activity Type']==activity,np.nan)
+    return specific_df.dropna(axis=0,how='all').reset_index()
+```
+
+
+```python
+ride_df = specific_df('Ride')
+run_df = specific_df('Run')
+ski_df = specific_df('Nordic Ski')
+hike_df = specific_df('Hike')
+```
+
+
+```python
+plt.figure(figsize=(10,6))
+plt.boxplot([ride_df['Distance mi'],run_df['Distance mi'],ski_df['Distance mi'],hike_df['Distance mi']],
+            labels = ['Ride','Run','Nordic Ski','Hike'])
+plt.ylabel("Distance (mi)")
+plt.title("Average Distance by Activity Type (2014-2021)")
+plt.show()
+```
+
+
+![png](/assets/images/strava6.png)
+
+
+
+```python
+plt.figure(figsize=(10,8))
+plt.hist([ride_df['Distance mi'],run_df['Distance mi'],ski_df['Distance mi'],hike_df['Distance mi']],
+         histtype = 'step', alpha = 1.0, range = (0,60), bins=60,
+         label = ["Ride","Run",'Nordic Ski','Hike'],color = ['blue','red','teal','orange'],lw=1.0)
+plt.xlim(-1,30)
+plt.title("Distance Distribution by Activity Type (2014-2021)")
+plt.xlabel("Distance (mi)")
+plt.ylabel("Occurrences")
+plt.legend()
+plt.show()
+```
+
+
+![png](/assets/images/strava7.png)
+
+
+
+```python
+plt.figure(figsize=(10,8))
+plt.hist([ride_df['Distance mi'],run_df['Distance mi'],ski_df['Distance mi'],hike_df['Distance mi']],
+         histtype = 'step', alpha = 1.0, range = (0,60), bins=120, cumulative = True, density = True,
+         label = ["Ride","Run",'Nordic Ski','Hike'],color = ['blue','red','teal','orange'],lw=1.0)
+plt.xlim(-1,20)
+plt.title("Empirical Cumulative Distribution Function\nby Activity Type (2014-2021)")
+plt.xlabel("Distance (mi)")
+plt.ylabel("Probability")
+plt.legend(loc='lower right')
+plt.show()
+```
+
+
+![png](/assets/images/strava8.png)
+
+
+Just for interest, I'll create a simple model to calculate the probability that any of my rides is greater than a certain distance.
+
+
+```python
+from statsmodels.distributions.empirical_distribution import ECDF
+ecdf = ECDF(ride_df['Distance mi']) # create model with ride data
+```
+
+
+```python
+print(f"*Based on my personal riding history*")
+print(f"Distance: 5 miles  \t Probability of Riding Farther: {1-ecdf(5):.4f}")
+print(f"Distance: 10 miles \t Probability of Riding Farther: {1-ecdf(10):.4f}")
+print(f"Distance: 15 miles \t Probability of Riding Farther: {1-ecdf(15):.4f}")
+print(f"Distance: 20 miles \t Probability of Riding Farther: {1-ecdf(20):.4f}")
+print(f"Distance: 30 miles \t Probability of Riding Farther: {1-ecdf(30):.4f}")
+```
+
+    *Based on my personal riding history*
+    Distance: 5 miles  	 Probability of Riding Farther: 0.8468
+    Distance: 10 miles 	 Probability of Riding Farther: 0.4393
+    Distance: 15 miles 	 Probability of Riding Farther: 0.1908
+    Distance: 20 miles 	 Probability of Riding Farther: 0.0838
+    Distance: 30 miles 	 Probability of Riding Farther: 0.0260
 
