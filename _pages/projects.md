@@ -31,6 +31,15 @@ feature_row:
     url: "https://johnmcgrane.github.io/projects/strava/"
     btn_class: "btn--primary"
     btn_label: "View Project"
+feature_row2:
+  - image_path: /assets/images/valueapp.png
+    alt: "Finding Value on the Pitch"
+    title: "Finding Value on the Pitch"
+    excerpt: "A Streamlit web application modelling market value among top world footballers"
+    url: "https://share.streamlit.io/johnmcgrane/football_value_app/main/valueApp.py"
+    btn_class: "btn--primary"
+    btn_label: "View Project"
 ---
 
 {% include feature_row %}
+{% include feature_row2 %}
