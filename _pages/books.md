@@ -17,6 +17,7 @@ Complexity: The Emerging Science at the Edge of Order and Chaos - Mitchell Waldr
 The Splendid and The Vile - Erik Larson<br />
 Avenue of Mysteries - John Irving<br />
 Oaxaca Journal - Oliver Sacks<br />
+On the Road - Jack Kerouac<br />
 The Silmarillion - J. R. R. Tolkien<br />
 Dune - Frank Herbert<br />
 Brilliant Orange - David Winner<br />
