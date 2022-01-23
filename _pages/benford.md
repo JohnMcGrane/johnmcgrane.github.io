@@ -72,7 +72,7 @@ def sampler(upperLimit, resets):
 
 Our task is now to build a function that randomly produces numbers that abide by Benford's law. Our function will take three parameters (1) the number of sampling events (*n* argument), (2) the order of magnitude of the dataset from which we will randomly select a sample (*oom* argument), and (3) the number of times the upper limit of the dataset will be reset before sampling (*ulresets* argument, implemented by the *sampler* function). This last *ulresets* parameter is perhaps the most difficult to understand but is vital for the production of Benford abiding data.
 
-I will attempt to shed light on this parameter by way of an example. Say the number of sampling events is set to 10,000 and the order of magnitude is set to 3. If the upper limit of the dataset is never randomly reset before sampling (i.e. *ulresets* = 0), then a random number between 1 and 1,000 will be randomly selected 10,000 times. This will NOT result in a Benford distribution because the numbers between 1 and 100 will be uniformly sampled, and all digits will be the first digit of a given sample 1/9 of the time or 11.11% of the time, as shown below .
+I will attempt to shed light on this parameter by way of an example. Say the number of sampling events is set to 10,000 and the order of magnitude is set to 3. If the upper limit of the dataset is never randomly reset before sampling (i.e. *ulresets* = 0), then a random number between 1 and 1,000 will be randomly selected 10,000 times. This will NOT result in a Benford distribution because the numbers between 1 and 1000 will be uniformly sampled, and all digits will be the first digit of a given sample 1/9 of the time or 11.11% of the time, as shown below.
 
 ### Figure 2
 
