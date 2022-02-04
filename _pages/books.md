@@ -19,6 +19,7 @@ Avenue of Mysteries - John Irving<br />
 Oaxaca Journal - Oliver Sacks<br />
 On the Road - Jack Kerouac<br />
 The Silmarillion - J. R. R. Tolkien<br />
+The Brothers Karamazov - Fyodor Dostoevsky<br />
 Dune - Frank Herbert<br />
 Brilliant Orange - David Winner<br />
 Open Veins of Latin America - Eduardo Galeano<br />
@@ -28,7 +29,7 @@ My Two Wars - Moritz Thomson<br />
 The Farm on the River of Emeralds - Moritz Thomson<br />
 Living Poor - Moritz Thomson<br />
 The Saddest Pleasure: A Journey on Two Rivers - Moritz Thomson<br />
-Air Apparent - Mark Monmonier<br />
+Air Apparent: How Meteorologists Learned to Map, Predict, and Dramatize Weather - Mark Monmonier<br />
 Lost in the Wild - Cary J. Griffith<br />
 Born to Run - Christopher McDougall<br />
 The Devil’s Highway - Luis Alberto Urrea<br />
@@ -78,7 +79,6 @@ The Tennis Partner - Abraham Verghese<br />
 Private Citizens - Tony Tulathimutte<br />
 Divided Minds - Carolyn S. Spiro & Pamela Spiro Wagner<br />
 The Worldly Philosophers - Robert Heilbroner<br />
-The Brothers Karamazov - Fyodor Dostoevsky<br />
 The Martian - Andy Weir<br />
 The Odyssey - Homer<br />
 The Lovely Bones - Alice Sebold<br />
