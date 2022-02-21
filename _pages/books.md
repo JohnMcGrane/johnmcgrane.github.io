@@ -10,7 +10,6 @@ header:
   caption: "© John Fox"
 ---
 
-Inverting The Pyramid: The History of Soccer Tactics - Jonathan Wilson<br />
 Waking Up - Sam Harris<br />
 The Prophet - Kahlil Gibran<br />
 Complexity: The Emerging Science at the Edge of Order and Chaos - Mitchell Waldrop<br />
@@ -29,6 +28,7 @@ My Two Wars - Moritz Thomson<br />
 The Farm on the River of Emeralds - Moritz Thomson<br />
 Living Poor - Moritz Thomson<br />
 The Lincoln Highway - Amor Towles<br />
+Inverting The Pyramid: The History of Soccer Tactics - Jonathan Wilson<br />
 The Saddest Pleasure: A Journey on Two Rivers - Moritz Thomson<br />
 Air Apparent: How Meteorologists Learned to Map, Predict, and Dramatize Weather - Mark Monmonier<br />
 Lost in the Wild - Cary J. Griffith<br />
