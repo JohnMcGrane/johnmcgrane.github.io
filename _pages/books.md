@@ -14,6 +14,7 @@ Waking Up - Sam Harris<br />
 The Prophet - Kahlil Gibran<br />
 Complexity: The Emerging Science at the Edge of Order and Chaos - Mitchell Waldrop<br />
 The Splendid and The Vile - Erik Larson<br />
+Songs for the Flames - Juan Gabriel Vásquez<br />
 Avenue of Mysteries - John Irving<br />
 Oaxaca Journal - Oliver Sacks<br />
 On the Road - Jack Kerouac<br />
