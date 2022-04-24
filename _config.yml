@@ -69,7 +69,8 @@ plugins:
 
 author:
   name   : "John Fox"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : <meta property="og:image" content="https://github.com/JohnMcGrane/johnmcgrane.github.io/blob/master/assets/images/bio-photo.jpg" />
+#  avatar : "/assets/images/bio-photo.jpg"
   bio    : "Scientist | Explorer"
 #  location: "Minnesota"
   links:
