@@ -69,8 +69,7 @@ plugins:
 
 author:
   name   : "John Fox"
-  avatar : <meta property="og:image" content="https://github.com/JohnMcGrane/johnmcgrane.github.io/blob/master/assets/images/bio-photo.jpg" />
-#  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/bio-photo.jpg"
   bio    : "Scientist | Explorer"
 #  location: "Minnesota"
   links:
@@ -101,10 +100,6 @@ author:
 #    - label: "Instagram"
 #      icon: "fab fa-fw fa-instagram"
 #      url: "https://instagram.com/"
-
-owner:
-  name   : "John Fox"
-  avatar : <meta property="og:image" content="https://github.com/JohnMcGrane/johnmcgrane.github.io/blob/master/assets/images/bio-photo.jpg" />
 
 footer:
   links:
