@@ -83,6 +83,7 @@ Private Citizens - Tony Tulathimutte<br />
 Divided Minds - Carolyn S. Spiro & Pamela Spiro Wagner<br />
 The Worldly Philosophers - Robert Heilbroner<br />
 The Martian - Andy Weir<br />
+Project Hail Mary - Andy Weir<br />
 The Odyssey - Homer<br />
 The Lovely Bones - Alice Sebold<br />
 Sphere - Michael Crichton<br />
