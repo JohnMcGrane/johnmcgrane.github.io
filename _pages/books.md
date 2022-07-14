@@ -54,6 +54,8 @@ When Breath Becomes Air - Paul Kalanithi<br />
 Origin - Dan Brown <br />
 Dark Disciple - Christie Golden<br />
 Catalyst - James Luceno<br />
+Odes to Common Things - Pablo Neruda<br />
+Dead Wake - Erik Larson<br />
 Bananas: How the United Fruit Company Shaped the World - Peter Chapman<br />
 The Hotel New Hampshire - John Irving<br />
 A Widow for One Year - John Irving<br />
