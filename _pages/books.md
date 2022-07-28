@@ -18,6 +18,7 @@ Songs for the Flames - Juan Gabriel Vásquez<br />
 Avenue of Mysteries - John Irving<br />
 Oaxaca Journal - Oliver Sacks<br />
 On the Road - Jack Kerouac<br />
+Tao Te Ching - Lao Tzu<br />
 The Silmarillion - J. R. R. Tolkien<br />
 The Brothers Karamazov - Fyodor Dostoevsky<br />
 Dune - Frank Herbert<br />
@@ -52,7 +53,6 @@ The Fellowship of the Ring - J. R. R. Tolkien<br />
 1984 - George Orwell<br />
 When Breath Becomes Air - Paul Kalanithi<br />
 Origin - Dan Brown <br />
-Dark Disciple - Christie Golden<br />
 Catalyst - James Luceno<br />
 Odes to Common Things - Pablo Neruda<br />
 Dead Wake - Erik Larson<br />
