@@ -19,6 +19,7 @@ Avenue of Mysteries - John Irving<br />
 Oaxaca Journal - Oliver Sacks<br />
 On the Road - Jack Kerouac<br />
 Tao Te Ching - Lao Tzu<br />
+Chronicle of a Death Foretold - Gabriel García Márquez<br />
 The Silmarillion - J. R. R. Tolkien<br />
 The Brothers Karamazov - Fyodor Dostoevsky<br />
 Dune - Frank Herbert<br />
