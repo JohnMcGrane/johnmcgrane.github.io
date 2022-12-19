@@ -46,7 +46,7 @@ feature_row3:
     excerpt: "Microplastics in the Water Column of Western Lake Superior"
     url: "/assets/files/ESTPublication.pdf"
     btn_class: "btn--primary"
-    btn_label: "View Research"
+    btn_label: "View Publication"
 ---
 
 {% include feature_row %}
