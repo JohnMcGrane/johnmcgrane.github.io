@@ -39,7 +39,16 @@ feature_row2:
     url: "https://share.streamlit.io/johnmcgrane/football_value_app/main/valueApp.py"
     btn_class: "btn--primary"
     btn_label: "View Project"
+feature_row3:
+  - image_path: /assets/images/Publication_image.png
+    alt: "Microplastics Research"
+    title: "Microplastics Research"
+    excerpt: "Microplastics in the Water Column of Western Lake Superior"
+    url: "/assets/files/ESTPublication.pdf"
+    btn_class: "btn--primary"
+    btn_label: "View Research"
 ---
 
 {% include feature_row %}
 {% include feature_row id="feature_row2" type="left" %}
+{% include feature_row id="feature_row3"%}
