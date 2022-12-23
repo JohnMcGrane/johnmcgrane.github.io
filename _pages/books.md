@@ -98,7 +98,5 @@ Angels & Demons - Dan Brown<br />
 The Da Vinci Code - Dan Brown<br />
 Inferno - Dan Brown<br />
 The Lost Symbol - Dan Brown<br />
-Lord of the Flies - William Golding<br />
-Animal Farm - George Orwell<br />
 
 
