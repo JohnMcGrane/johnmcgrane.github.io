@@ -18,6 +18,7 @@ Songs for the Flames - Juan Gabriel Vásquez<br />
 Avenue of Mysteries - John Irving<br />
 Oaxaca Journal - Oliver Sacks<br />
 On the Road - Jack Kerouac<br />
+The Boys in the Boat - Daniel James Brown<br />
 Tao Te Ching - Lao Tzu<br />
 Chronicle of a Death Foretold - Gabriel García Márquez<br />
 The Silmarillion - J. R. R. Tolkien<br />
