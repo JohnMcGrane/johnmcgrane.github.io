@@ -78,7 +78,7 @@ author:
       url: "https://www.google.com/maps/place/Minnesota/@46.3540035,-97.8490966,6z/data=!3m1!4b1!4m5!3m4!1s0x4d585b9a60780b9b:0x2a2c99b10fea20f!8m2!3d46.729553!4d-94.6858998"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:johnmcgranefox@gmail.com"
+      url: "mailto:"
 #    - label: "Resume"
 #      icon: "far fa-fw fa-file-pdf"
 #      url: "/assets/files/2021-Resume.pdf"
