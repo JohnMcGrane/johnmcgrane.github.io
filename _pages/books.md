@@ -16,6 +16,7 @@ Complexity: The Emerging Science at the Edge of Order and Chaos - Mitchell Waldr
 The Splendid and The Vile - Erik Larson<br />
 Songs for the Flames - Juan Gabriel Vásquez<br />
 Avenue of Mysteries - John Irving<br />
+Unfinished Tales of Númenor & Middle-Earth<br />
 Oaxaca Journal - Oliver Sacks<br />
 On the Road - Jack Kerouac<br />
 The Boys in the Boat - Daniel James Brown<br />
