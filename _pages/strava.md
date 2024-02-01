@@ -17,7 +17,7 @@ from matplotlib.lines import Line2D
 
 Strava is an activity tracking application that allows users to see their distance and route, and a whole host of other interesting activity data. Since I have been using this application for over 7 years now, I have built up a large cache of personal data in the app. To see how my activity in general and my activity of choice in particular have changed over the years, I created the following data visualizations.
 
-View this data visualization as a [web app](https://share.streamlit.io/johnmcgrane/strava/main/stravaApp.py)
+View this data visualization as a [web app](https://johnmcgrane-strava-stravaapp-rulndn.streamlit.app/)
 
 ### Import and view data
 
