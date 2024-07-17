@@ -14,7 +14,10 @@ Waking Up - Sam Harris<br />
 The Prophet - Kahlil Gibran<br />
 Complexity: The Emerging Science at the Edge of Order and Chaos - Mitchell Waldrop<br />
 The Splendid and The Vile - Erik Larson<br />
+The Wager - David Grann<br />
+The Demon of Unrest - Erik Larson<br />
 Songs for the Flames - Juan Gabriel Vásquez<br />
+Empires of the Word: A Language History of the World - Nicholas Ostler<br />
 Avenue of Mysteries - John Irving<br />
 The Covenant of Water - Abraham Verghese<br />
 Unfinished Tales of Númenor & Middle-Earth - J. R. R. Tolkien<br />
