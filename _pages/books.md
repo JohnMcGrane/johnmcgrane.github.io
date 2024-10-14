@@ -16,6 +16,7 @@ Complexity: The Emerging Science at the Edge of Order and Chaos - Mitchell Waldr
 The Splendid and The Vile - Erik Larson<br />
 The Wager - David Grann<br />
 The Demon of Unrest - Erik Larson<br />
+Sweet Land - Will Weaver<br />
 Songs for the Flames - Juan Gabriel Vásquez<br />
 Empires of the Word: A Language History of the World - Nicholas Ostler<br />
 Avenue of Mysteries - John Irving<br />
