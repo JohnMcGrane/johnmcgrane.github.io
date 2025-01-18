@@ -17,12 +17,15 @@ The Splendid and The Vile - Erik Larson<br />
 The Wager - David Grann<br />
 The Demon of Unrest - Erik Larson<br />
 Sweet Land - Will Weaver<br />
+Behind the Curtain: Travels in Eastern European Football - Jonathan Wilson<br />
+Complexity: The Emerging Science at the Edge of Order and Chaos - Mitchell Waldrop<br />
 Songs for the Flames - Juan Gabriel Vásquez<br />
 Empires of the Word: A Language History of the World - Nicholas Ostler<br />
 Avenue of Mysteries - John Irving<br />
 The Covenant of Water - Abraham Verghese<br />
 Beren and Lúthien - J. R. R. Tolkien<br />
 Unfinished Tales of Númenor & Middle-Earth - J. R. R. Tolkien<br />
+The Fall of Gondolin - J. R. R. Tolkien<br />
 Oaxaca Journal - Oliver Sacks<br />
 On the Road - Jack Kerouac<br />
 The Boys in the Boat - Daniel James Brown<br />
