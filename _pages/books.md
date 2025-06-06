@@ -12,7 +12,6 @@ header:
 
 Waking Up - Sam Harris<br />
 The Prophet - Kahlil Gibran<br />
-Complexity: The Emerging Science at the Edge of Order and Chaos - Mitchell Waldrop<br />
 The Splendid and The Vile - Erik Larson<br />
 The Wager - David Grann<br />
 The Demon of Unrest - Erik Larson<br />
