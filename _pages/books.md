@@ -14,6 +14,7 @@ Waking Up - Sam Harris<br />
 The Prophet - Kahlil Gibran<br />
 The Splendid and The Vile - Erik Larson<br />
 The Wager - David Grann<br />
+Demon Copperhead - Barbara Kingsolver<br />
 The Demon of Unrest - Erik Larson<br />
 Sweet Land - Will Weaver<br />
 Behind the Curtain: Travels in Eastern European Football - Jonathan Wilson<br />
@@ -28,6 +29,7 @@ The Fall of Gondolin - J. R. R. Tolkien<br />
 Oaxaca Journal - Oliver Sacks<br />
 On the Road - Jack Kerouac<br />
 Isaac's Storm - Erik Larson<br />
+The Wide Wide Sea - Hampton Sides<br />
 The Boys in the Boat - Daniel James Brown<br />
 Tao Te Ching - Lao Tzu<br />
 Chronicle of a Death Foretold - Gabriel García Márquez<br />
