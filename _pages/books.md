@@ -27,6 +27,8 @@ Beren and Lúthien - J. R. R. Tolkien<br />
 Unfinished Tales of Númenor & Middle-Earth - J. R. R. Tolkien<br />
 The Fall of Gondolin - J. R. R. Tolkien<br />
 Oaxaca Journal - Oliver Sacks<br />
+West with the Night - Beryl Markham<br />
+Killers of the Flower Moon: The Osage Murders and the Birth of the FBI - David Grann<br />
 On the Road - Jack Kerouac<br />
 Isaac's Storm - Erik Larson<br />
 The Wide Wide Sea - Hampton Sides<br />
