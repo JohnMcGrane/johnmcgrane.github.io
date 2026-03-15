@@ -13,8 +13,8 @@ header:
 Waking Up - Sam Harris<br />
 The Prophet - Kahlil Gibran<br />
 The Splendid and The Vile - Erik Larson<br />
-The Wager - David Grann<br />
 Demon Copperhead - Barbara Kingsolver<br />
+Trust - Hernan Diaz<br />
 The Demon of Unrest - Erik Larson<br />
 Sweet Land - Will Weaver<br />
 Behind the Curtain: Travels in Eastern European Football - Jonathan Wilson<br />
@@ -23,6 +23,7 @@ Songs for the Flames - Juan Gabriel Vásquez<br />
 Empires of the Word: A Language History of the World - Nicholas Ostler<br />
 Avenue of Mysteries - John Irving<br />
 The Covenant of Water - Abraham Verghese<br />
+The Wager - David Grann<br />
 Beren and Lúthien - J. R. R. Tolkien<br />
 Unfinished Tales of Númenor & Middle-Earth - J. R. R. Tolkien<br />
 The Fall of Gondolin - J. R. R. Tolkien<br />
@@ -102,6 +103,7 @@ Divided Minds - Carolyn S. Spiro & Pamela Spiro Wagner<br />
 The Worldly Philosophers - Robert Heilbroner<br />
 The Martian - Andy Weir<br />
 Project Hail Mary - Andy Weir<br />
+The Fall of Reach - Eric Nylund<br />
 The Odyssey - Homer<br />
 The Lovely Bones - Alice Sebold<br />
 Sphere - Michael Crichton<br />
