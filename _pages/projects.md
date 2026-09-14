@@ -47,6 +47,14 @@ feature_row3:
     url: "/assets/files/ESTPublication.pdf"
     btn_class: "btn--primary"
     btn_label: "View Publication"
+feature_row4:
+  - image_path: /assets/images/UIUC-research-thumbnail.png
+    alt: "Organic Chemistry Research"
+    title: "Organic Chemistry Research"
+    excerpt: "Enantioselective Phase Transfer Catalysis"
+    url: "/assets/files/UIUC-Poster.pdf"
+    btn_class: "btn--primary"
+    btn_label: "View Project Poster"
 ---
 
 {% include feature_row %}
