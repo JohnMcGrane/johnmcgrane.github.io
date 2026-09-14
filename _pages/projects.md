@@ -32,13 +32,13 @@ feature_row:
     btn_class: "btn--primary"
     btn_label: "View Project"
 feature_row2:
-  - image_path: /assets/images/valueapp.png
-    alt: "Finding Value on the Pitch"
-    title: "Finding Value on the Pitch"
-    excerpt: "A Streamlit web application modeling market value among top world footballers"
-    url: "https://share.streamlit.io/johnmcgrane/football_value_app/main/valueApp.py"
+  - image_path: /assets/images/cow.png
+    alt: "Public Health Research"
+    title: "Public Health Research"
+    excerpt: "Evaluating Awareness of Well Testing Recommendations and Fish Consumption Advisories in Central Wisconsin"
+    url: "/assets/files/PIC-Poster.pdf"
     btn_class: "btn--primary"
-    btn_label: "View Project"
+    btn_label: "View Project Poster"
 feature_row3:
   - image_path: /assets/images/Publication_image.png
     alt: "Microplastics Research"
