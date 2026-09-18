@@ -12,6 +12,7 @@ header:
 
 Waking Up - Sam Harris<br />
 The Prophet - Kahlil Gibran<br />
+Haroun and the Sea of Stories  - Salman Rushdie<br />
 The Splendid and The Vile - Erik Larson<br />
 Demon Copperhead - Barbara Kingsolver<br />
 Trust - Hernan Diaz<br />
