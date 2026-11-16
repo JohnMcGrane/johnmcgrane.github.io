@@ -12,7 +12,7 @@ header:
 
 Waking Up - Sam Harris<br />
 The Prophet - Kahlil Gibran<br />
-Haroun and the Sea of Stories  - Salman Rushdie<br />
+Midnight's Children  - Salman Rushdie<br />
 The Splendid and The Vile - Erik Larson<br />
 Demon Copperhead - Barbara Kingsolver<br />
 Trust - Hernan Diaz<br />
@@ -66,6 +66,7 @@ Endurance - Alfred Lansing<br />
 The Alchemist - Paulo Coelho<br />
 My Own Country - Abraham Verghese<br />
 Being Mortal - Atul Gawande<br />
+Haroun and the Sea of Stories  - Salman Rushdie<br />
 The Return of the King - J. R. R. Tolkien<br />
 The Two Towers - J. R. R. Tolkien<br />
 The Fellowship of the Ring - J. R. R. Tolkien<br />
